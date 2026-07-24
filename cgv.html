@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales de Vente — Phénix Bâtiment</title>
+<meta name="description" content="Conditions Générales de Vente de Phénix Bâtiment.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2128; --ink-2:#2a303a; --paper:#f8f5ef; --paper-2:#efe8d9; --line:#ddd3ba;
+  --gold-1:#f2c15a; --gold-2:#cf9538; --gold-3:#9c5f1f; --stone:#5b6470; --stone-2:#8a929c;
+  --serif:'Lora', serif; --sans:'Work Sans', sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.55; position:relative;}
+img{max-width:100%; display:block;}
+.bg-watermark{position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:min(640px,72vw); height:min(640px,72vw); background-image:url("assets/logo.png"); background-repeat:no-repeat; background-position:center; background-size:contain; opacity:.10; z-index:1; pointer-events:none;}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width:900px; margin:0 auto; padding:0 28px;}
+.eyebrow{font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--gold-3);}
+h1,h2,h3{font-family:var(--serif); font-weight:600; line-height:1.15;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:14px 26px; font-family:var(--sans); font-weight:600; font-size:.92rem; border:1px solid transparent; cursor:pointer; transition:transform .15s ease;}
+.btn:hover{transform:translateY(-2px);}
+.btn-gold{background:linear-gradient(135deg, var(--gold-1), var(--gold-3)); color:var(--ink);}
+
+header{position:sticky; top:0; z-index:50; background:rgba(248,245,239,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav{max-width:1180px; margin:0 auto; padding:0 28px; display:flex; align-items:center; justify-content:space-between; height:84px;}
+.nav-logo img{height:56px; width:auto;}
+.nav-links{display:flex; align-items:center; gap:34px; font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; font-weight:600;}
+.nav-links a{position:relative; padding:6px 0; color:var(--ink);}
+.nav-links a::after{content:''; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--gold-2); transition:width .2s ease;}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--ink); color:var(--gold-1) !important; padding:11px 20px; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700;}
+.nav-cta:hover{background:var(--gold-1); color:var(--ink) !important;}
+.burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;}
+.burger span{width:24px; height:2px; background:var(--ink);}
+.mobile-menu{display:none; flex-direction:column; background:var(--paper); border-bottom:1px solid var(--line);}
+.mobile-menu a{padding:16px 28px; border-top:1px solid var(--line); font-size:.85rem; text-transform:uppercase; font-weight:600;}
+.mobile-menu.open{display:flex;}
+@media(max-width:900px){ .nav-links{display:none;} .burger{display:flex;} }
+
+.banner{background:var(--ink); color:var(--paper); padding:70px 0 50px; position:relative; z-index:2;}
+.banner h1{font-size:clamp(2rem,3.6vw,2.8rem); margin-top:14px;}
+.banner p{color:#c9cdd4; margin-top:16px; max-width:60ch;}
+
+.legal{padding:70px 0 100px; position:relative; z-index:2;}
+.legal-block{background:rgba(248,245,239,.88); border:1px solid var(--line); padding:44px 48px; }
+.legal h2{font-size:1.3rem; color:var(--gold-3); margin:40px 0 14px;}
+.legal h2:first-child{margin-top:0;}
+.legal h3{font-size:1.05rem; margin:26px 0 10px;}
+.legal p{color:var(--stone); margin-bottom:14px; font-size:.95rem;}
+.legal ul{margin:0 0 14px 0; padding-left:22px; color:var(--stone); font-size:.95rem;}
+.legal li{margin-bottom:8px;}
+.legal .updated{font-size:.8rem; color:var(--stone-2); margin-bottom:36px;}
+.back-link{display:inline-block; margin-top:40px; font-size:.85rem; font-weight:600; text-decoration:underline; text-underline-offset:4px; color:var(--gold-3);}
+@media(max-width:640px){ .legal-block{padding:30px 24px;} }
+
+footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px; position:relative; z-index:2;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px;}
+.foot-grid h4{font-family:var(--serif); color:var(--paper); font-size:1.05rem; margin-bottom:18px;}
+.foot-grid a, .foot-grid p{display:block; font-size:.88rem; color:#aeb4bd; margin-bottom:10px;}
+.foot-grid a:hover{color:var(--gold-1);}
+.foot-logo{height:44px; margin-bottom:14px;}
+.foot-tag{font-size:.85rem; color:#9198a2; max-width:32ch;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08); margin-top:50px; padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.78rem; color:#7d838d;}
+@media(max-width:900px){ .foot-grid{grid-template-columns:1fr 1fr; row-gap:36px;} }
+@media(max-width:560px){ .foot-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<div class="bg-watermark" aria-hidden="true"></div>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Phénix Bâtiment"></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="partenaires.html">Partenaires</a>
+      <a href="contact.html">Contact</a>
+      <a href="devis.html" class="nav-cta">Devis gratuit</a>
+    </nav>
+    <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="contact.html">Contact</a>
+    <a href="devis.html">Devis gratuit</a>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-1);">Informations légales</span>
+    <h1>Conditions Générales de Vente</h1>
+    <p>Applicables à toute commande passée auprès de Phénix Bâtiment.</p>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="wrap">
+    <div class="legal-block">
+      <p class="updated">Dernière mise à jour : à compléter</p>
+
+      <h2>I. Clauses générales</h2>
+      <p>Toute commande implique de la part de l'acheteur l'acceptation des présentes conditions. De ce fait, aucune clause contraire ne peut être opposée à Phénix Bâtiment si elle ne l'a formellement acceptée.</p>
+      <p>Toute promesse ou affirmation faite par nos agents doit être mentionnée sur le présent contrat et reste valable, sauf dénonciation écrite par la Société dans un délai de quatorze jours après réception de la commande.</p>
+
+      <h2>II. Prix et paiements</h2>
+      <p>Nos prix de vente sont ceux en vigueur le jour de la commande. Nos prix sont révisables. Le paiement se fait à compter du 15ème (quinzième) jour après l'acceptation de la commande.</p>
+      <p>Si la livraison est retardée par une cause imputable à l'acheteur, le paiement sera exigible à la date de mise à disposition initialement prévue (15ème jour).</p>
+
+      <h2>III. Clause pénale</h2>
+      <p>Le défaut de paiement d'une facture nous autorise, tous droits et actions réservés, à suspendre toute livraison et à faire courir les intérêts au taux légal des avances de la Banque de France, de plein droit et sans mise en demeure préalable, majorés des frais et pénalités.</p>
+
+      <h2>IV. Réserve de propriété</h2>
+      <p>En application de la loi n°80-135 du 12 mai 1980, il est expressément précisé que l'acheteur ne sera propriétaire du bien qu'après complet paiement de toutes les sommes dues.</p>
+      <p>Phénix Bâtiment conserve l'entière propriété du bien livré jusqu'au paiement intégral et effectif des factures qui s'y rapportent. Jusqu'au paiement effectif, le bien est considéré comme consigné au dépôt chez l'acheteur, à ses risques et périls. En cas de non-paiement pour quelque raison que ce soit, l'acheteur devra restituer le bien à la demande du vendeur.</p>
+
+      <h2>V. Matériel</h2>
+      <p>Le matériel livré conformément au bon de commande n'est ni repris ni échangé. Le matériel complémentaire par rapport à une demande initiale doit faire l'objet d'une nouvelle proposition écrite.</p>
+
+      <h2>VI. Juridiction</h2>
+      <p>Les droits et obligations des parties sont régis par le droit français.</p>
+
+      <h2>Garantie</h2>
+      <p>En application de l'article 1641 et suivants du Code civil, Phénix Bâtiment reste tenue de la garantie légale en cas de défauts ou de vices cachés du matériel qu'elle commercialise.</p>
+      <p>Est exclu de la garantie tout matériel sur lequel :</p>
+      <ul>
+        <li>Des interventions ont été pratiquées sans notre autorisation expresse ;</li>
+        <li>Des détériorations ont été subies suite à des accidents, à des négligences, à l'inobservation des conditions normales d'utilisation, ainsi qu'à des sinistres de cause naturelle, tels que : foudre, incendie, dégâts des eaux…</li>
+      </ul>
+      <p>L'électronique ne doit pas avoir été démontée, déréglée ou transformée. La réparation ou le remplacement du matériel pendant la période de garantie ne peut avoir pour effet de prolonger la durée de la garantie contractuelle.</p>
+      <p>Le matériel vendu est garanti dans les conditions légales prévues aux articles 1641 et suivants du Code civil. Phénix Bâtiment garantit les défauts ou vices cachés rendant le matériel impropre à l'usage auquel il est destiné.</p>
+
+      <h2>Extraits du Code de la consommation</h2>
+
+      <h3>Article L121-1</h3>
+      <p>Les pratiques commerciales déloyales sont interdites.</p>
+      <p>Une pratique commerciale est déloyale lorsqu'elle est contraire aux exigences de la diligence professionnelle et qu'elle altère ou est susceptible d'altérer de manière substantielle le comportement économique du consommateur normalement informé et raisonnablement attentif et avisé, à l'égard d'un bien ou d'un service.</p>
+      <p>Le caractère déloyal d'une pratique commerciale visant une catégorie particulière de consommateurs ou un groupe de consommateurs vulnérables en raison d'une infirmité mentale ou physique, de leur âge ou de leur crédulité s'apprécie au regard de la capacité moyenne de discernement de la catégorie ou du groupe.</p>
+      <p>Constituent, en particulier, des pratiques commerciales déloyales les pratiques commerciales trompeuses définies aux articles L.121-2 à L.121-4 et les pratiques commerciales agressives définies aux articles L.121-6 et L.121-7.</p>
+
+      <h3>Article L121-2</h3>
+      <p>Une pratique commerciale est trompeuse si elle est commise dans l'une des circonstances suivantes :</p>
+      <ul>
+        <li>Lorsqu'elle crée une confusion avec un autre bien ou service, une marque, un nom commercial ou un autre signe distinctif d'un concurrent ;</li>
+        <li>Lorsqu'elle repose sur des allégations, indications ou présentations fausses ou de nature à induire en erreur portant notamment sur l'existence, la disponibilité ou la nature du bien ou du service, ses caractéristiques essentielles, le prix ou le mode de calcul du prix, le service après-vente, la portée des engagements de l'annonceur, l'identité et les qualités du professionnel, ou le traitement des réclamations ;</li>
+        <li>Lorsque la personne pour le compte de laquelle elle est mise en œuvre n'est pas clairement identifiable.</li>
+      </ul>
+
+      <h3>Article L121-3</h3>
+      <p>Une pratique commerciale est également trompeuse si, compte tenu des limites propres au moyen de communication utilisé et des circonstances qui l'entourent, elle omet, dissimule ou fournit de façon inintelligible, ambiguë ou à contretemps une information substantielle, ou lorsqu'elle n'indique pas sa véritable intention commerciale dès lors que celle-ci ne ressort pas déjà du contexte.</p>
+      <p>Dans toute communication commerciale constituant une invitation à l'achat, sont notamment considérées comme substantielles les informations suivantes : les caractéristiques principales du bien ou du service, l'adresse et l'identité du professionnel, le prix toutes taxes comprises et les frais de livraison, les modalités de paiement, de livraison, d'exécution et de traitement des réclamations, ainsi que l'existence d'un droit de rétractation lorsqu'il est prévu par la loi.</p>
+
+      <h3>Article L121-4</h3>
+      <p>Sont réputées trompeuses, au sens des articles L.121-2 et L.121-3, notamment les pratiques commerciales qui consistent à se prétendre à tort signataire d'un code de conduite, à afficher un label ou une certification sans autorisation, à affirmer faussement qu'un produit a été agréé par un organisme public ou privé, à proposer un produit à un prix indiqué sans pouvoir raisonnablement le fournir, à déclarer faussement qu'un produit ne sera disponible que pour une durée très limitée, ou encore à donner l'impression qu'une vente est licite alors qu'elle ne l'est pas.</p>
+
+      <h3>Article L121-5</h3>
+      <p>Les dispositions des articles L.121-2 à L.121-4 sont également applicables aux pratiques qui visent les professionnels et les non-professionnels.</p>
+
+      <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="max-width:1180px;">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo.png" alt="Phénix Bâtiment" class="foot-logo">
+        <p class="foot-tag">Façade, isolation thermique extérieure et rénovation. Construire, rénover, valoriser.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="partenaires.html">Partenaires</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Ravalement de façade</a>
+        <a href="services.html">Isolation thermique (ITE)</a>
+        <a href="services.html">Rénovation</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Adresse à compléter</p>
+        <p>contact@phenixbatiment.com</p>
+        <p>www.phenixbatiment.com</p>
+        <a href="devis.html">Demander un devis →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Phénix Bâtiment. Tous droits réservés.</span>
+      <a href="cgv.html" style="color:#7d838d; text-decoration:underline; text-underline-offset:3px;">Conditions générales de vente</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
