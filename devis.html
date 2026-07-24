@@ -7,17 +7,17 @@
 <meta name="description" content="Demandez un devis gratuit pour votre projet de façade, ITE ou rénovation avec Phénix Bâtiment.">
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#1c2128; --ink-2:#2a303a; --paper:#f8f5ef; --paper-2:#efe8d9; --line:#ddd3ba;
   --gold-1:#f2c15a; --gold-2:#cf9538; --gold-3:#9c5f1f; --stone:#5b6470; --stone-2:#8a929c;
-  --serif:'Fraunces', serif; --sans:'Work Sans', sans-serif;
+  --serif:'Lora', serif; --sans:'Work Sans', sans-serif;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 body{font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.55;}
 img{max-width:100%; display:block;}
-.bg-watermark{position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:min(640px,72vw); height:min(640px,72vw); background-image:url("assets/logo.png"); background-repeat:no-repeat; background-position:center; background-size:contain; opacity:.05; z-index:-1; pointer-events:none;}
+.bg-watermark{position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:min(640px,72vw); height:min(640px,72vw); background-image:url("assets/logo.png"); background-repeat:no-repeat; background-position:center; background-size:contain; opacity:.10; z-index:1; pointer-events:none;}
 a{color:inherit; text-decoration:none;}
 .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
 .eyebrow{font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--gold-3);}
@@ -34,7 +34,7 @@ header{position:sticky; top:0; z-index:50; background:rgba(248,245,239,.92); bac
 .nav-links a::after{content:''; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--gold-2); transition:width .2s ease;}
 .nav-links a:hover::after, .nav-links a.active::after{width:100%;}
 .nav-links a.active{color:var(--gold-3);}
-.nav-cta{background:var(--ink); color:var(--paper); padding:11px 20px; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700;}
+.nav-cta{background:var(--ink); color:var(--gold-1) !important; padding:11px 20px; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700;}
 .burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;}
 .burger span{width:24px; height:2px; background:var(--ink);}
 .mobile-menu{display:none; flex-direction:column; background:var(--paper); border-bottom:1px solid var(--line);}
@@ -113,7 +113,7 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
       <a href="realisations.html">Réalisations</a>
       <a href="partenaires.html">Partenaires</a>
       <a href="contact.html">Contact</a>
-      <a href="devis.html" class="nav-cta active" style="color:var(--paper);">Devis gratuit</a>
+      <a href="devis.html" class="nav-cta">Devis gratuit</a>
     </nav>
     <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -149,7 +149,7 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
         <div>
           <span class="eyebrow" style="color:var(--gold-1);">Estimation rapide</span>
           <h2>Votre budget façade ou ITE en quelques clics</h2>
-          <p>Renseignez quelques informations pour obtenir une fourchette de prix indicative. Le devis précis reste établi après visite du chantier.</p>
+          <p>Renseignez quelques informations pour obtenir un prix indicatif. Le devis précis reste établi après visite du chantier.</p>
         </div>
         <div class="calc-tabs">
           <button type="button" class="calc-tab active" data-calc-type="facade">Façade</button>
@@ -180,8 +180,8 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
         </div>
         <div class="calc-result">
           <span class="eyebrow2">Estimation indicative</span>
-          <div class="price">Entre <span id="calc-min">—</span> € et <span id="calc-max">—</span> €</div>
-          <div class="calc-note">Cette fourchette est une estimation non contractuelle. Le tarif exact dépend de l'état du support et sera confirmé après visite.</div>
+          <div class="price">Environ <span id="calc-min">—</span> €</div>
+          <div class="calc-note">Ce prix est une estimation non contractuelle. Le tarif exact dépend de l'état du support et sera confirmé après visite.</div>
           <button type="button" class="btn btn-gold" id="calc-use">Utiliser cette estimation pour ma demande</button>
         </div>
       </div>
@@ -250,7 +250,8 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
         <h4>Contact</h4>
         <p>Adresse à compléter</p>
         <p>Téléphone à compléter</p>
-        <p>contact@phenix-batiment.fr</p>
+        <p>contact@phenixbatiment.com</p>
+        <p>www.phenixbatiment.com</p>
         <a href="devis.html">Demander un devis →</a>
       </div>
     </div>
@@ -262,19 +263,19 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
 </footer>
 
 <script>
-  /* ===== Tarifs indicatifs — à ajuster selon vos coûts réels ===== */
+  /* ===== Tarifs — à ajuster selon vos coûts réels ===== */
   const PRICING = {
     facade: {
-      m2: [35, 55],        // €/m² de façade ravalée, fourchette basse/haute
-      ouverture: [70, 95]  // €/ouverture (encadrements, appuis de fenêtre)
+      m2: 50,         // €/m² de façade ravalée
+      ouverture: 150  // €/ouverture (encadrements, appuis de fenêtre)
     },
     ite: {
       isolant: {
-        pse:   [95, 120],  // €/m² polystyrène expansé, pose comprise
-        laine: [115, 140], // €/m² laine de roche, pose comprise
-        fibre: [135, 165]  // €/m² fibre de bois, pose comprise
+        pse:   160,   // €/m² polystyrène expansé, pose comprise
+        laine: 180,   // €/m² laine de roche, pose comprise
+        fibre: 230    // €/m² fibre de bois, pose comprise
       },
-      ouverture: [100, 140] // €/ouverture (tableaux de fenêtre, appuis, finitions ITE)
+      ouverture: 150  // €/ouverture (tableaux de fenêtre, appuis, finitions ITE)
     }
   };
 
@@ -284,7 +285,6 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
   const ouverturesInput = document.getElementById('calc-ouvertures');
   const isolantSelect = document.getElementById('calc-isolant');
   const minOut = document.getElementById('calc-min');
-  const maxOut = document.getElementById('calc-max');
   let calcType = 'facade';
 
   function formatEuro(n){
@@ -294,23 +294,16 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
   function recalcEstimate(){
     const surface = Math.max(0, parseFloat(surfaceInput.value) || 0);
     const ouvertures = Math.max(0, parseFloat(ouverturesInput.value) || 0);
-    let low, high;
+    let total;
 
     if(calcType === 'facade'){
-      const [m2Low, m2High] = PRICING.facade.m2;
-      const [ouvLow, ouvHigh] = PRICING.facade.ouverture;
-      low = surface * m2Low + ouvertures * ouvLow;
-      high = surface * m2High + ouvertures * ouvHigh;
+      total = surface * PRICING.facade.m2 + ouvertures * PRICING.facade.ouverture;
     } else {
       const isolant = isolantSelect.value;
-      const [m2Low, m2High] = PRICING.ite.isolant[isolant];
-      const [ouvLow, ouvHigh] = PRICING.ite.ouverture;
-      low = surface * m2Low + ouvertures * ouvLow;
-      high = surface * m2High + ouvertures * ouvHigh;
+      total = surface * PRICING.ite.isolant[isolant] + ouvertures * PRICING.ite.ouverture;
     }
 
-    minOut.textContent = formatEuro(low).toLocaleString('fr-FR');
-    maxOut.textContent = formatEuro(high).toLocaleString('fr-FR');
+    minOut.textContent = formatEuro(total).toLocaleString('fr-FR');
   }
 
   calcTabs.forEach(tab=>{
@@ -340,7 +333,7 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
 
     const isolantLabel = calcType === 'ite' ? isolantSelect.options[isolantSelect.selectedIndex].text : null;
     const noteParts = [
-      `Estimation en ligne : ${minOut.textContent} € – ${maxOut.textContent} €`,
+      `Estimation en ligne : environ ${minOut.textContent} €`,
       `${ouverturesInput.value} ouverture(s)`
     ];
     if(isolantLabel) noteParts.push(`Isolant envisagé : ${isolantLabel}`);

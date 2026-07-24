@@ -37,16 +37,16 @@ Les tarifs indicatifs utilisés par le simulateur sont isolés en haut du `<scri
 ```js
 const PRICING = {
   facade: {
-    m2: [35, 55],        // €/m² de façade ravalée
-    ouverture: [70, 95]  // €/ouverture (fenêtre, porte)
+    m2: 50,         // €/m² de façade ravalée
+    ouverture: 150  // €/ouverture (fenêtre, porte)
   },
   ite: {
     isolant: {
-      pse:   [95, 120],
-      laine: [115, 140],
-      fibre: [135, 165]
+      pse:   160,
+      laine: 180,
+      fibre: 230
     },
-    ouverture: [100, 140]
+    ouverture: 150
   }
 };
 ```
