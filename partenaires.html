@@ -53,17 +53,14 @@ header{position:sticky; top:0; z-index:50; background:rgba(248,245,239,.92); bac
 .intro p{color:var(--stone);}
 
 .logos{padding:40px 0 90px;}
-.partners-quincunx{display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:26px 28px; padding:10px 0 20px;}
+.partners-quincunx{display:flex; flex-direction:column; align-items:center; gap:28px; padding:10px 0 20px;}
+.quincunx-row{display:flex; justify-content:center; gap:28px; flex-wrap:wrap;}
 .partner-logo{width:180px; height:110px; display:flex; align-items:center; justify-content:center; padding:22px; border:1px solid var(--line); background:var(--paper-2); transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
 .partner-logo img{max-width:100%; max-height:100%; object-fit:contain; filter:grayscale(1); opacity:.8; transition:filter .2s ease, opacity .2s ease;}
-.partner-logo:hover{border-color:var(--gold-2); box-shadow:0 10px 24px rgba(28,33,40,.08);}
+.partner-logo:hover{border-color:var(--gold-2); box-shadow:0 10px 24px rgba(28,33,40,.08); transform:translateY(-4px);}
 .partner-logo:hover img{filter:none; opacity:1;}
-.partner-logo:nth-child(odd){transform:translateY(-10px);}
-.partner-logo:nth-child(even){transform:translateY(22px);}
-.partner-logo:nth-child(odd):hover{transform:translateY(-16px);}
-.partner-logo:nth-child(even):hover{transform:translateY(16px);}
 @media(max-width:900px){ .intro-grid{grid-template-columns:1fr;} }
-@media(max-width:640px){ .partner-logo:nth-child(odd), .partner-logo:nth-child(even){transform:none;} .partners-quincunx{gap:18px;} }
+@media(max-width:560px){ .quincunx-row{gap:18px;} .partner-logo{width:150px; height:95px;} }
 
 .certs{padding:0 0 100px;}
 .cert-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
@@ -143,11 +140,15 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
 
 <section class="logos">
   <div class="wrap partners-quincunx">
-    <a href="https://www.prb.fr/fr/categories/isolation" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/prb.png" alt="PRB"></a>
-    <a href="https://www.fr.weber/isolation-thermique-par-lexterieur-ite" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/weber.png" alt="Weber"></a>
-    <a href="https://www.parexlanko.com/produits/niveau-2/isolation" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/parexlanko.png" alt="Parexlanko"></a>
-    <a href="https://www.pointp.fr/" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/pointp.png" alt="Point.P"></a>
-    <a href="https://www.materiaux-simc.fr/" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/simc.png" alt="SIMC"></a>
+    <div class="quincunx-row">
+      <a href="https://www.prb.fr/fr/categories/isolation" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/prb.png" alt="PRB"></a>
+      <a href="https://www.fr.weber/isolation-thermique-par-lexterieur-ite" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/weber.png" alt="Weber"></a>
+      <a href="https://www.parexlanko.com/produits/niveau-2/isolation" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/parexlanko.png" alt="Parexlanko"></a>
+    </div>
+    <div class="quincunx-row">
+      <a href="https://www.pointp.fr/" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/pointp.png" alt="Point.P"></a>
+      <a href="https://www.materiaux-simc.fr/" target="_blank" rel="noopener noreferrer" class="partner-logo"><img src="assets/partners/simc.png" alt="SIMC"></a>
+    </div>
   </div>
 </section>
 
