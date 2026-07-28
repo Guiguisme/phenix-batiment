@@ -124,6 +124,16 @@ header{position:sticky; top:0; z-index:50; background:rgba(248,245,239,.92); bac
 @media(max-width:900px){ .works-grid{grid-template-columns:1fr 1fr;} }
 @media(max-width:560px){ .works-grid{grid-template-columns:1fr;} }
 
+.work-ba{background:#000;}
+.ba-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; user-select:none; -webkit-user-drag:none;}
+.ba-label{position:absolute; top:16px; z-index:3; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700; padding:6px 10px; background:rgba(28,33,40,.75); color:var(--paper);}
+.ba-label-before{left:16px;}
+.ba-label-after{right:16px;}
+.ba-handle{position:absolute; top:0; bottom:0; width:2px; background:var(--paper); transform:translateX(-50%); z-index:2; pointer-events:none; display:flex; align-items:center; justify-content:center;}
+.ba-handle span{width:34px; height:34px; border-radius:50%; background:var(--gold-1); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:.95rem; box-shadow:0 2px 8px rgba(0,0,0,.3);}
+.ba-slider{position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:4; -webkit-appearance:none; appearance:none; background:transparent;}
+.ba-slider::-webkit-slider-thumb{-webkit-appearance:none; width:100%; height:100%;}
+
 /* Partenaires strip */
 .partners{padding:70px 0; background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
 .partners .eyebrow{text-align:center; display:block; margin-bottom:26px;}
@@ -251,20 +261,16 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
     <div class="works-grid">
       <div class="work-card"><div class="swatch"></div><span class="tag">Façade</span><div class="cap"><b>Maison individuelle</b><span>Photo à venir</span></div></div>
       <div class="work-card"><div class="swatch"></div><span class="tag">ITE</span><div class="cap"><b>Immeuble collectif</b><span>Photo à venir</span></div></div>
-      <div class="work-card"><div class="swatch"></div><span class="tag">Rénovation</span><div class="cap"><b>Rénovation intérieure</b><span>Photo à venir</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="partners">
-  <div class="wrap">
-    <span class="eyebrow">Ils nous font confiance</span>
-    <div class="partners-row">
-      <div>Fournisseur A</div>
-      <div>Fournisseur B</div>
-      <div>Certification RGE</div>
-      <div>Assurance décennale</div>
-      <div>Fournisseur C</div>
+      <div class="work-card work-ba">
+        <img src="assets/realisations/renovation-apres.jpg" class="ba-img" alt="Après rénovation">
+        <img src="assets/realisations/renovation-avant.jpg" class="ba-img ba-before" alt="Avant rénovation" style="clip-path:inset(0 50% 0 0);">
+        <span class="ba-label ba-label-before">Avant</span>
+        <span class="ba-label ba-label-after">Après</span>
+        <div class="ba-handle" style="left:50%;"><span>⟷</span></div>
+        <input type="range" min="0" max="100" value="50" class="ba-slider" aria-label="Comparer avant et après">
+        <span class="tag">Rénovation</span>
+        <div class="cap"><b>Rénovation intérieure</b><span>Faites glisser pour comparer</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -326,6 +332,17 @@ footer{background:var(--ink-2); color:#c9cdd4; padding:70px 0 30px;}
     });
   }, {threshold:.3});
   layers.forEach(l=>io.observe(l));
+
+  const baSlider = document.querySelector('.ba-slider');
+  if(baSlider){
+    const baBefore = document.querySelector('.ba-before');
+    const baHandle = document.querySelector('.ba-handle');
+    baSlider.addEventListener('input', ()=>{
+      const v = baSlider.value;
+      baBefore.style.clipPath = `inset(0 ${100-v}% 0 0)`;
+      baHandle.style.left = v + '%';
+    });
+  }
 </script>
 </body>
 </html>
